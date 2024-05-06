@@ -1,8 +1,15 @@
 # bling-alarm
 Alarm time for the bling project.
 
-The alarm.txt file contains the alarm time in the format `HH:MM`.
+The alarm.txt file contains the alarm time in the format `HH:MM,HH:MM,HH:MM,HH:MM,HH:MM,HH:MM,HH:MM`.
 
-In the future we will specify as a cron job like this: `30 18 * * 1,2,3,4,5`
+Each entry specifies the alarm time for each day of the week, starting with Sunday and ending with Saturday.
 
-This string would run the alarm at 6:30pm on Monday, Tuesday, Wednesday, Thursday, and Friday.
+For a blank, no alarm value, use `--:--`.
+
+# Holidays
+
+The school_day-2019-2025.csv file contains the list of NSW School Days from this source:
+https://www.data.nsw.gov.au/data/dataset/2-school-and-public-holidays
+
+Alarms only activate during school term.
